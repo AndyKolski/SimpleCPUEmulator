@@ -5,6 +5,7 @@ An emulator for a CPU that I designed
 Compile with `make`
 
 ## Usage
-Assemble a rom from assembly with `./createrom demo.s demo.bin`
+Assemble a rom from assembly with `./createrom demo.bin demo.s`
+Create an empty rom with `./createrom demo.bin`
 
 Boot rom with `./emulator demo.bin`
