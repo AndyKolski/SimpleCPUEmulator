@@ -1,0 +1,32 @@
+0000 0000 - NOP - Skip
+0000 0001 - LDA - Load RAM to A reg
+0000 0010 - LDB - Load RAM to B reg
+0000 0011 - LDC - Load RAM to C reg
+0000 0100 - LDM - Load RAM to Math In reg
+0000 0101 - LDO - Load RAM to Output reg
+0000 0110 - LAA - Load arbitrary value to A reg
+0000 0111 - LAB - Load arbitrary value to to B reg
+0000 1000 - LAC - Load arbitrary value to to C reg
+0000 1001 - LAM - Load arbitrary value to to Math In reg
+0000 1010 - LAO - Load arbitrary value to to Output reg
+0000 1011 - ADD - Add A reg to Math reg, storing in Math Out reg
+0000 1100 - SUB - Subtract A reg with Math reg, storing in Math Out reg
+0000 1101 - INC - Increment A
+0000 1110 - DEC - Decrement A
+0000 1111 - MOA - Move A reg to RAM
+0001 0000 - MOB - Move B reg to RAM
+0001 0001 - MOC - Move C reg to RAM
+0001 0010 - MOM - Move Math In reg to RAM
+0001 0011 - MMO - Move Math Out reg to RAM
+0001 0100 - CMP - Compare Math In with A Reg
+0001 0101 - JMP - Set PC to value from A reg
+0001 0110 - JME - Set PC to value from A reg if equal
+0001 0111 - JNE - Set PC to value from A reg if not equal
+0001 1000 - JGT - Set PC to value from A reg if greater than
+0001 1001 - JLT - Set PC to value from A reg if lesser than
+0001 1010 - GTE - Set PC to value from A reg if greater than or equal
+0001 1011 - LTE - Set PC to value from A reg if lesser than or equal
+
+1111 1101 - CAL - Call subroutine at RAM address
+1111 1110 - RET - Return to where subroutine was called
+1111 1111 - HLT - Halt system
