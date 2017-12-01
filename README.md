@@ -9,3 +9,39 @@ Assemble a rom from assembly with `./createrom demo.bin demo.s`
 Create an empty rom with `./createrom demo.bin`
 
 Boot rom with `./emulator demo.bin`
+
+## Instruction Set
+
+Binary Representation | Hex | Nmenonic | Brief Description
+---|---|---|---
+0000 0000 - 00 - NOP - Skip instruction
+0000 0001 - 01 - LDA - Load RAM to A register
+0000 0010 - 02 - LDB - Load RAM to B register
+0000 0011 - 03 - LDC - Load RAM to C register
+0000 0100 - 04 - LDM - Load RAM to Math In register 
+0000 0101 - 05 - LDO - Load RAM to Math Output register 
+0000 0110 - 06 - LAA - Load arbitrary value to A register
+0000 0111 - 07 - LAB - Load arbitrary value to B register
+0000 1000 - 08 - LAC - Load arbitrary value to C register
+0000 1001 - 09 - LAM - Load arbitrary value to Math In register 
+0000 1010 - 0A - LAO - Load arbitrary value to Math Output register 
+0000 1011 - 0B - ADD - Add A register to Math register, storing in Math Out register 
+0000 1100 - 0C - SUB - Subtract A register with Math register, storing in Math Out register 
+0000 1101 - 0D - INC - Increment A register by arbitrary value
+0000 1110 - 0E - DEC - Decrement A register by arbitrary value
+0000 1111 - 0F - MOA - Move A register to RAM
+0001 0000 - 10 - MOB - Move B register to RAM
+0001 0001 - 11 - MOC - Move C register to RAM
+0001 0010 - 12 - MOM - Move Math In register to RAM
+0001 0011 - 13 - MMO - Move Math Out register to RAM
+0001 0100 - 14 - CMP - Compare Math In with A register
+0001 0101 - 15 - JMP - Set PC to value from A register
+0001 0110 - 16 - JME - Set PC to value from A register if equal flag set
+0001 0111 - 17 - JNE - Set PC to value from A register if not equal flag set
+0001 1000 - 18 - JGT - Set PC to value from A register if greater than flag set
+0001 1001 - 19 - JLT - Set PC to value from A register if lesser than flag set
+0001 1010 - 1A - GTE - Set PC to value from A register if greater than  or equal flag set
+0001 1011 - 1B - LTE - Set PC to value from A register if lesser than or equal flag set
+1111 1101 - FD - CAL - Call subroutine at RAM address
+1111 1110 - FE - RET - Return to where the subroutine was called
+1111 1111 - FF - HLT - Halt system

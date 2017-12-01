@@ -228,7 +228,7 @@ int main(int argc, char *argv[]) {
 
 			else {
 				split(str, ' ', &arr);
-				printf("Instruction #%i (%s) Not found!\n", memaddr+1, arr[0]);
+				printf("Instruction #%i (%s) Not found! Ignoring\n", memaddr+1, arr[0]);
 			}
 			memaddr++;
 		}
