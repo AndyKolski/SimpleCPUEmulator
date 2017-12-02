@@ -3,7 +3,9 @@ An emulator for a CPU that I designed
 
 ## Compilation
 Download source `git clone https://github.com/AndyKolski/SimpleCPUEmulator.git`
+
 CD into source directory `cd SimpleCPUEmulator/`
+
 Compile source with `make`
 
 ## Usage
