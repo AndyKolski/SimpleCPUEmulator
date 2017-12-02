@@ -90,11 +90,15 @@ int main(int argc, char *argv[]) {
 	}
 	FILE *ptr;
 	if (argc == 3) {
-		printf("Loading asm file \"%s\"\n", argv[2]);
+		printf("Loading asm file \"%s\"\n", argv[1]);
+		if( access( argv[1], F_OK ) == -1 ) {
+			printf("Unable to load asm file \"%s\"\n", argv[1]);
+			return 1;
+		}
 		char str[2048];
 		int memaddr = 0;
 		char bfr[10];
-		ptr = fopen(argv[2],"r");
+		ptr = fopen(argv[1],"r");
 		char **arr = NULL;
 
 		while (fgets(str, 2048, ptr) != NULL) {
@@ -234,16 +238,17 @@ int main(int argc, char *argv[]) {
 		}
 
 		fclose(ptr);
-	}
 
-	if (argc >= 2) {
-		printf("Creating memory map \"%s\"\n", argv[1]);
+		printf("Creating memory map \"%s\"\n", argv[2]);
 
-		ptr = fopen(argv[1],"wb");
+		ptr = fopen(argv[2],"wb");
 
 		fwrite(memoryOCs,1,mem,ptr);
 		fwrite(memoryDT,1,mem,ptr);
 		fclose(ptr);
+	} else {
+		printf("Usage: %s <asm.s> <rom.bin>\n", argv[0]);
+		return 1;
 	}
 	return 0;
 }

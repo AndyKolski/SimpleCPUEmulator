@@ -31,8 +31,15 @@ int main(int argc, char *argv[]) {
 	{
 		memoryDT[i] = 0;
 	}
-	if (argc == 2) {
-		printf("Loading memory map \"%s\"...\n", argv[1]);
+	if (argc != 2) {
+		printf("Usage: %s <rom.bin>\n", argv[0]);
+		return 1;
+	}
+		printf("Loading rom \"%s\"...\n", argv[1]);
+		if( access( argv[1], F_OK ) == -1 ) {
+			printf("Unable to load rom \"%s\"\n", argv[1]);
+			return 1;
+		}
 		FILE *ptr;
 
 		ptr = fopen(argv[1],"rb");
@@ -40,7 +47,7 @@ int main(int argc, char *argv[]) {
 		fread(memoryOCs,1,256,ptr);
 		fread(memoryDT,1,256,ptr);
 		fclose(ptr);
-	}
+	
 	
 
 	while (on) {

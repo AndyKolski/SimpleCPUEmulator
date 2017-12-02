@@ -9,7 +9,7 @@ CD into source directory with `cd SimpleCPUEmulator/`
 Compile source with `make`
 
 ## Usage
-Assemble a rom from assembly with `./createrom demo.bin demo.s` or create an empty rom with `./createrom demo.bin`
+Assemble a rom from assembly with `./createrom demo.s demo.bin`
 
 Boot rom with `./emulator demo.bin`
 
