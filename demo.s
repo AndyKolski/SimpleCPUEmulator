@@ -1,3 +1,4 @@
+#Comments look like this
 LAM 100
 LAA 0
 INC 5

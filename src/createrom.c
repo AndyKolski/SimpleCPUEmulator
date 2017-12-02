@@ -102,7 +102,7 @@ int main(int argc, char *argv[]) {
 		char **arr = NULL;
 
 		while (fgets(str, 2048, ptr) != NULL) {
-			printf("instruction #%i\n", memaddr+1);
+			printf("Line #%i\n", memaddr+1);
 			if (StartsWith(str, "NOP")) {
 				memoryOCs[memaddr] = 0b00000000;
 				
@@ -225,6 +225,10 @@ int main(int argc, char *argv[]) {
 
 			} else if (StartsWith(str, "HLT")) {
 				memoryOCs[memaddr] = 0b11111111;
+				
+
+			} else if (StartsWith(str, "#")) {
+				
 				
 
 			}
