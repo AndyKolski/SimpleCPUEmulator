@@ -2,7 +2,9 @@
 An emulator for a CPU that I designed
 
 ## Compilation
-Compile with `make`
+Download source `git clone https://github.com/AndyKolski/SimpleCPUEmulator.git`
+CD into source directory `cd SimpleCPUEmulator/`
+Compile source with `make`
 
 ## Usage
 Assemble a rom from assembly with `./createrom demo.bin demo.s` or create an empty rom with `./createrom demo.bin`
