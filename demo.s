@@ -5,8 +5,8 @@ LAB 6
 MOA 30
 MOB 31
 
-LDM 33 # load RAM address 20 to Math register
-LDA 30 # load RAM address 20 to A register 
+LDM 33 # load RAM address 30 to Math register
+LDA 30 # load RAM address 30 to A register 
 ADD
 MMO 33 #load result into RAM address 33
 
