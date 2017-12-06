@@ -16,7 +16,7 @@ MOA 32 # load a to 22
 
 LDM 31
 CMP
-JNE 5
+JNE 4
 
 LDO 33
 HLT

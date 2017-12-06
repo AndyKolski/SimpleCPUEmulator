@@ -100,9 +100,11 @@ int main(int argc, char *argv[]) {
 		char bfr[10];
 		ptr = fopen(argv[1],"r");
 		char **arr = NULL;
+		int adv = 1;
 
 		while (fgets(str, 2048, ptr) != NULL) {
 			printf("Line #%i\n", memaddr+1);
+			adv = 1;
 			if (StartsWith(str, "NOP")) {
 				memoryOCs[memaddr] = 0b00000000;
 				
@@ -228,11 +230,11 @@ int main(int argc, char *argv[]) {
 				
 
 			} else if (StartsWith(str, "#")) {
-				
+				adv = 0;
 				
 
 			} else if (StartsWith(str, "\n")) {
-				
+				adv = 0;
 				
 
 			}
@@ -242,7 +244,9 @@ int main(int argc, char *argv[]) {
 				split(str, ' ', &arr);
 				printf("Instruction #%i (%s) Not found! Ignoring\n", memaddr+1, arr[0]);
 			}
-			memaddr++;
+			if (adv) {
+				memaddr++;
+			}
 		}
 
 		fclose(ptr);
