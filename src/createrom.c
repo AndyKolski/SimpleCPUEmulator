@@ -66,15 +66,6 @@ int split (const char *str, char c, char ***arr) {
 
 	return count;
 }
-int numbers_only(const char s[]) {
-	int n = 0;
-    for (int i = 0; i < sizeof(s); ++i)
-    {
-    	if (s[i]<'0' || s[i]>'9') n = 1;
-    }
-
-    return n;
-}
 int main(int argc, char *argv[]) {
 	int mem = 256;
 	unsigned char memoryOCs[mem];
