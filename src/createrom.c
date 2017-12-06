@@ -233,6 +233,10 @@ int main(int argc, char *argv[]) {
 				adv = 0;
 				
 
+			} else if (StartsWith(str, ";")) {
+				adv = 0;
+				
+
 			} else if (StartsWith(str, "\n")) {
 				adv = 0;
 				
