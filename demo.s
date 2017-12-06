@@ -1,22 +1,22 @@
 #Multiply two numbers
 #In this case, 4 and 6 (the first two instructions)
 LAA 4
-LAB 6 
-MOA 20
-MOB 21
+LAB 6
+MOA 30
+MOB 31
 
-LDM 23 # load 20 to m
-LDA 20 # load 20 to a
+LDM 33 # load 20 to m
+LDA 30 # load 20 to a
 ADD
-MMO 23 #load result into 23
+MMO 33 #load result into 23
 
-LDA 22 # load 22 to a
+LDA 32 # load 22 to a
 INC 1
-MOA 22 # load a to 22
+MOA 32 # load a to 22
 
-LDM 21
+LDM 31
 CMP
 JNE 5
 
-LDO 23
+LDO 33
 HLT
