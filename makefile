@@ -1,5 +1,5 @@
 make: clean emulator createrom
-	echo 'done'
+	echo 'Finished'
 
 emulator:
 	echo 'compiling emulator.c ...'
